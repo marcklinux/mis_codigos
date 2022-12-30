@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Index de Restaurant</title>
+</head>
+<body>
+
+<h1>Gestion de restaurant</h1>
+<br/>
+<a th:href="@{alta}">Agregar</a>
+<br/>
+<table border ="1">
+<thead>
+<tr>
+<th>Id</th>
+<th>Nombre</th>
+<th>Telefono</th>
+<th>Direccion</th>
+<th>Eliminar</th>
+<th>Editar</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each = "r : ${lista}">
+<td th:text = "${r.id}"> Id</td>
+<td th:text = "${r.nombre}">Nombre</td>
+<td th:text = "${r.telefono}">Telefono</td>
+<td th:text = "${r.direccion}">Direccion</td>
+<td><a th:href="@{/eliminar/}+${r.id}" th:text="Eliminar"></a></td>
+<td><a th:href="@{/editar/}+${r.id}" th:text="Editar"></a></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

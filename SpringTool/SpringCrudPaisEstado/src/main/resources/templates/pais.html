@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Index</title>
+</head>
+<body>
+
+<h1>Gestion de paises</h1>
+<a th:href="@{/}">Regresar</a>
+<br/>
+<a th:href="@{/PaisControl/alta}">Agregar</a>
+<br/>
+<table border ="1">
+<thead>
+<tr>
+<th>Id</th>
+<th>Nombre</th>
+<th>Continente</th>
+
+<th>Eliminar</th>
+<th>Editar</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each = "r : ${lista}">
+<td th:text = "${r.id}"> Id</td>
+<td th:text = "${r.nombre}">Nombre</td>
+<td th:text = "${r.continente}">Cotinente</td>
+
+<td><a th:href="@{/PaisControl/eliminar/}+${r.id}" th:text="Eliminar"></a></td>
+<td><a th:href="@{/PaisControl/editar/}+${r.id}" th:text="Editar"></a></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

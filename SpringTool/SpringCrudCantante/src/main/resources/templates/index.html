@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Index de Empleado</title>
+</head>
+<body>
+
+<h1>Gestion de empleados</h1>
+<br/>
+<a th:href="@{alta}">Agregar</a>
+<br/>
+<table border ="1">
+<thead>
+<tr>
+<th>Id</th>
+<th>Nombre</th>
+<th>Genero</th>
+<th>Boleto</th>
+<th>Pais</th>
+<th>Eliminar</th>
+<th>Editar</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each = "r : ${lista}">
+<td th:text = "${r.id}"> Id</td>
+<td th:text = "${r.nombre}">Nombre</td>
+<td th:text = "${r.genero}">Genero</td>
+<td th:text = "${r.boleto}">Boleto</td>
+<td th:text = "${r.pais}">Pais</td>
+<td><a th:href="@{/eliminar/}+${r.id}" th:text="Eliminar"></a></td>
+<td><a th:href="@{/editar/}+${r.id}" th:text="Editar"></a></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,5 @@
+package com.pruebas.banco.excepciones;
+
+public class DineroInsuficienteException {
+
+}

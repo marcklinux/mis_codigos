@@ -1,0 +1,5 @@
+package com.mx.CrudRest.dto;
+
+public class Cliente {
+
+}

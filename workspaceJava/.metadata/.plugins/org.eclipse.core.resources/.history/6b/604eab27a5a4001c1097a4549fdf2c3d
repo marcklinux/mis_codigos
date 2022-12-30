@@ -1,0 +1,47 @@
+package com.pais.servicio;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.pais.dao.PaisDAO;
+import com.pais.dominio.Pais;
+
+@Service
+public class PaisServImp implements PaisServ {
+	
+	@Autowired
+	private PaisDAO paisDAO;
+
+	@Override
+	public void guardar(Pais pais) {
+		paisDAO.save(pais);
+		
+	}
+
+	@Override
+	public void editar(Pais pais) {
+		paisDAO.save(pais);
+		
+	}
+
+	@Override
+	public void eliminar(Pais pais) {
+		paisDAO.delete(pais);
+		
+	}
+
+	@Override
+	public Pais buscar(Pais pais) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Pais> listar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

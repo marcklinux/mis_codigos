@@ -1,0 +1,5 @@
+package com.pruebas.banco.servicio;
+
+public class CuentaServicioImpl {
+
+}

@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Agregar</title>
+</head>
+<body>
+
+<h1>agregar Cantante</h1>
+<a th:href="@{/}">Regresar</a>
+<br/>
+<form th:action = "@{guardar}" method="POST" th:object= "${cantante}">
+<label for = "id"> Id: </label>
+<input type="text" name = "id" th:field="*{id}"/>
+<br/>
+<label for = "nombre"> nombre: </label>
+<input type="text" name = "nombre" th:field="*{nombre}"/>
+<br/>
+<label for = "app"> Genero: </label>
+<input type="text" name = "genero" th:field="*{genero}"/>
+<br/>
+<label for = "apm"> Boleto: </label>
+<input type="text" name = "boleto" th:field="*{boleto}"/>
+<br/>
+<label for = "puesto"> Pais: </label>
+<input type="text" name = "pais" th:field="*{pais}"/>
+<br/>
+
+
+<input type="submit" name="guardar" value="guardar"/>
+</form>
+
+</body>
+</html>

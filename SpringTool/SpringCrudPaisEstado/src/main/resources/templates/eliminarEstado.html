@@ -1,0 +1,38 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>eliminar</title>
+</head>
+<body>
+
+<h1>eliminar Estado</h1>
+<a th:href="@{/EstadoControl/}">Regresar</a>
+<br/>
+<form th:action = "@{/EstadoControl/delete}" method="POST" th:object= "${estado}">
+<label for = "id"> Id: </label>
+<input type="hidden" name = "id" th:field="*{id}"/>
+<br/>
+<label for = "modelo"> nombre: </label>
+<input type="text" name = "nombre" th:field="*{nombre}"/>
+<br/>
+<label for = "marca"> Region: </label>
+<input type="text" name = "region" th:field="*{region}"/>
+<br/>
+<label for = "marca"> Habitantes: </label>
+<input type="text" name = "habitantes" th:field="*{habitantes}"/>
+<br/>
+<label for = "marca"> Capital: </label>
+<input type="text" name = "capital" th:field="*{capital}"/>
+<br/>
+<label for = "marca"> Codigo Pais: </label>
+<input type="text" name = "pais" th:field="*{pais.id}"/>
+<br/>
+
+
+
+
+<input type="submit" name="eliminar" value="eliminar"/>
+</form>
+
+</body>
+</html>

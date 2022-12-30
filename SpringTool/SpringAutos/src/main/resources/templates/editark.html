@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Agregar</title>
+</head>
+<body>
+
+<h1>editar AutoKia</h1>
+<a th:href="@{/AutoKiaControl/}">Regresar</a>
+<br/>
+<form th:action = "@{/AutoKiaControl/update}" method="POST" th:object= "${autoKia}">
+<label for = "id"> Id: </label>
+<input type="text" name = "id" th:field="*{id}"/>
+<br/>
+<label for = "modelo"> modelo: </label>
+<input type="text" name = "modelo" th:field="*{modelo}"/>
+<br/>
+<label for = "marca"> Marca: </label>
+<input type="text" name = "marca" th:field="*{marca}"/>
+<br/>
+<label for = "precio"> Precio: </label>
+<input type="text" name = "precio" th:field="*{precio}"/>
+<br/>
+<label for = "puertas"> Puertas: </label>
+<input type="text" name = "puertas" th:field="*{puertas}"/>
+<br/>
+
+
+<input type="submit" name="editar" value="editar"/>
+</form>
+
+</body>
+</html>

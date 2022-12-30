@@ -1,0 +1,5 @@
+package com.pruebas.banco.repositorios;
+
+public interface CuentaRepositorio {
+
+}

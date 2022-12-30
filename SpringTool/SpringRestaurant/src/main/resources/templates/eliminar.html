@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Eliminar</title>
+</head>
+<body>
+
+<h1>Eliminar restaurant</h1>
+<a th:href="@{/}">Regresar</a>
+<br/>
+<form th:action = "@{/delete}" method="POST" th:object= "${restaurant}">
+<label for = "id"> Id: </label>
+<input type="text" name = "id" th:field="*{id}"/>
+<br/>
+<label for = "nombre"> nombre: </label>
+<input type="text" name = "nombre" th:field="*{nombre}"/>
+<br/>
+<label for = "telefono"> Telefono: </label>
+<input type="text" name = "telefono" th:field="*{telefono}"/>
+<br/>
+<label for = "direccion"> Direccion: </label>
+<input type="text" name = "direccion" th:field="*{direccion}"/>
+<br/>
+
+<input type="submit" name="eliminar" value="Eliminar"/>
+</form>
+
+</body>
+</html>

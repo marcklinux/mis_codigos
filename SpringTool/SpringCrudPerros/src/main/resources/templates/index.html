@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>veterinaria</title>
+</head>
+<body>
+
+<h1>Perritos</h1>
+<br/>
+<a th:href="@{alta}">Agregar</a>
+<br/>
+<table border ="1">
+<thead>
+<tr>
+<th>Id</th>
+<th>Nombre</th>
+<th>Raza</th>
+<th>Edad</th>
+<th>Descripcion</th>
+<th>Eliminar</th>
+<th>Editar</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each = "r : ${lista}">
+<td th:text = "${r.id}"> Id</td>
+<td th:text = "${r.nombre}">Nombre</td>
+<td th:text = "${r.raza}">Apellido paterno</td>
+<td th:text = "${r.edad}">Apellido materno</td>
+<td th:text = "${r.descripcion}">Puesto</td>
+<td><a th:href="@{/eliminar/}+${r.id}" th:text="Eliminar"></a></td>
+<td><a th:href="@{/editar/}+${r.id}" th:text="Editar"></a></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

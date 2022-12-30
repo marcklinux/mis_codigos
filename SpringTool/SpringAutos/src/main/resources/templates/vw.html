@@ -1,0 +1,38 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Index de Autos</title>
+</head>
+<body>
+
+<h1>Gestion de autos VW</h1>
+<a th:href="@{/}">Regresar</a>
+<br/>
+<a th:href="@{/AutoVwControl/alta}">Agregar</a>
+<br/>
+<table border ="1">
+<thead>
+<tr>
+<th>Id</th>
+<th>Modelo</th>
+<th>Marca</th>
+<th>Precio</th>
+<th>Color</th>
+<th>Eliminar</th>
+<th>Editar</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each = "r : ${lista}">
+<td th:text = "${r.id}"> Id</td>
+<td th:text = "${r.modelo}">Modelo</td>
+<td th:text = "${r.marca}">Marca</td>
+<td th:text = "${r.precio}">Precio</td>
+<td th:text = "${r.color}">Color</td>
+<td><a th:href="@{/AutoVwControl/eliminar/}+${r.id}" th:text="Eliminar"></a></td>
+<td><a th:href="@{/AutoVwControl/editar/}+${r.id}" th:text="Editar"></a></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

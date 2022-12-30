@@ -1,0 +1,12 @@
+package com.pruebas.banco.entidades;
+
+import java.math.BigDecimal;
+
+public class TransaccionDTO {
+	
+	private Long cuentaOrigenId;
+	private Long cuentaDestinoId;
+	private BigDecimal monto;
+	private Long bancoId;
+
+}

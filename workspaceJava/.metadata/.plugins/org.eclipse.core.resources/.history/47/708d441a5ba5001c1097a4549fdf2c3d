@@ -1,0 +1,92 @@
+package com.pais.dominio;
+
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+
+
+
+
+@Entity
+@Table(name="ESTADO")
+public class Estado {
+	
+	@Id
+	int id;
+	private String nombre;
+	private String region;
+	private int habitantes;
+	private String capital;
+	
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name="ID_PAIS")
+	private Pais pais;
+
+
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	public String getNombre() {
+		return nombre;
+	}
+
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+
+	public String getRegion() {
+		return region;
+	}
+
+
+	public void setRegion(String region) {
+		this.region = region;
+	}
+
+
+	public int getHabitantes() {
+		return habitantes;
+	}
+
+
+	public void setHabitantes(int habitantes) {
+		this.habitantes = habitantes;
+	}
+
+
+	public String getCapital() {
+		return capital;
+	}
+
+
+	public void setCapital(String capital) {
+		this.capital = capital;
+	}
+
+
+	public Pais getPais() {
+		return pais;
+	}
+
+
+	public void setPais(Pais pais) {
+		this.pais = pais;
+	}
+	
+	
+
+}

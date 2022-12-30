@@ -1,0 +1,46 @@
+package com.pruebas.banco.servicio;
+
+import java.math.BigDecimal;
+import java.util.List;
+
+import com.pruebas.banco.entidades.Cuenta;
+
+public class CuentaServicioImpl implements CuentaServicio{
+
+	@Override
+	public List<Cuenta> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Cuenta findById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Cuenta save(Cuenta cuenta) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int revisarTotalTransferencias(Long bancoId) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public BigDecimal revisarSaldo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void transferirDinero(Long numeroCuentaOrigen, Long numeroCuentaDestino, BigDecimal monto, Long bancoId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

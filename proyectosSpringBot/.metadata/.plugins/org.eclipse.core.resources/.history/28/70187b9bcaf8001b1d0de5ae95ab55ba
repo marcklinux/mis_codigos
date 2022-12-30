@@ -1,0 +1,5 @@
+package com.mx.CrudRest.dao;
+
+public interface IClienteDao {
+
+}

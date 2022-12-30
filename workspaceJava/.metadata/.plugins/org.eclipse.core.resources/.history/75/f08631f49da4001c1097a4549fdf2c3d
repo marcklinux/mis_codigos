@@ -1,0 +1,5 @@
+package com.pais.dominio;
+
+public class Pais {
+
+}

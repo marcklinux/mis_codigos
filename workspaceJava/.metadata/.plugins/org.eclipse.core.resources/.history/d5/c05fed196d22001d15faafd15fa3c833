@@ -1,0 +1,58 @@
+package com.pruebas.banco.servicio;
+
+import java.math.BigDecimal;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.pruebas.banco.entidades.Cuenta;
+import com.pruebas.banco.repositorios.BancoRepositorio;
+import com.pruebas.banco.repositorios.CuentaRepositorio;
+
+public class CuentaServicioImpl implements CuentaServicio{
+	
+	@Autowired
+	private CuentaRepositorio cuentaRepositorio;
+	
+	@Autowired
+	private BancoRepositorio bancoRepositorio;
+
+	@Override
+	@Transactional(readOnly = true)
+	public List<Cuenta> findAll() {
+		return cuentaRepositorio.findAll();
+		
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public Cuenta findById(Long id) {
+		return cuentaRepositorio.findById(id).orElseThrow();
+	}
+
+	@Override
+	public Cuenta save(Cuenta cuenta) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int revisarTotalTransferencias(Long bancoId) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public BigDecimal revisarSaldo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void transferirDinero(Long numeroCuentaOrigen, Long numeroCuentaDestino, BigDecimal monto, Long bancoId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

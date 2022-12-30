@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Agregar</title>
+</head>
+<body>
+
+<h1>agregar paises</h1>
+<a th:href="@{/PaisControl/}">Regresar</a>
+<br/>
+<form th:action = "@{/PaisControl/guardar}" method="POST" th:object= "${pais}">
+<label for = "id"> Id: </label>
+<input type="hidden" name = "id" th:field="*{id}"/>
+<br/>
+<label for = "modelo"> nombre: </label>
+<input type="text" name = "nombre" th:field="*{nombre}"/>
+<br/>
+<label for = "marca"> continente: </label>
+<input type="text" name = "continente" th:field="*{continente}"/>
+<br/>
+
+
+
+<input type="submit" name="guardar" value="guardar"/>
+</form>
+
+</body>
+</html>

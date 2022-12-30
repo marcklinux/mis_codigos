@@ -1,0 +1,14 @@
+package com.pais.servicio;
+
+import java.util.List;
+
+import com.pais.dominio.Estado;
+
+public interface EstadoServ {
+	
+	public void guardar(Estado estado);
+	public void editar(Estado estado);
+	public void eliminar(Estado estado);
+	public Estado buscar(Estado estado);
+
+}

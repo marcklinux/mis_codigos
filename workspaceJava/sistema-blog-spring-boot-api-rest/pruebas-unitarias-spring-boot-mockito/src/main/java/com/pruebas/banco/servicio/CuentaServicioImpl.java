@@ -1,0 +1,72 @@
+package com.pruebas.banco.servicio;
+
+import java.math.BigDecimal;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.pruebas.banco.entidades.Banco;
+import com.pruebas.banco.entidades.Cuenta;
+import com.pruebas.banco.repositorios.BancoRepositorio;
+import com.pruebas.banco.repositorios.CuentaRepositorio;
+
+public class CuentaServicioImpl implements CuentaServicio {
+
+	@Autowired
+	private CuentaRepositorio cuentaRepositorio;
+
+	@Autowired
+	private BancoRepositorio bancoRepositorio;
+
+	@Override
+	@Transactional(readOnly = true)
+	public List<Cuenta> findAll() {
+		return cuentaRepositorio.findAll();
+
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public Cuenta findById(Long id) {
+		return cuentaRepositorio.findById(id).orElseThrow();
+	}
+
+	@Override
+	public Cuenta save(Cuenta cuenta) {
+		return cuentaRepositorio.save(cuenta);
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public int revisarTotalTransferencias(Long bancoId) {
+		Banco banco = bancoRepositorio.findById(bancoId).orElseThrow();
+		return banco.getTotalTranserencias();
+
+	}
+
+	@Override
+	public BigDecimal revisarSaldo(Long cuentaId) {
+		Cuenta cuenta = cuentaRepositorio.findById(cuentaId).orElseThrow();
+		return cuenta.getSaldo();
+
+	}
+
+	@Override
+	public void transferirDinero(Long numeroCuentaOrigen, Long numeroCuentaDestino, BigDecimal monto, Long bancoId) {
+		Cuenta cuentaOrigen = cuentaRepositorio.findById(numeroCuentaOrigen).orElseThrow();
+		cuentaOrigen.realizarDebito(monto);
+		cuentaRepositorio.save(cuentaOrigen);
+
+		Cuenta cuentaDestino = cuentaRepositorio.findById(numeroCuentaDestino).orElseThrow();
+		cuentaDestino.realizarCredito(monto);
+		cuentaRepositorio.save(cuentaDestino);
+
+		Banco banco = bancoRepositorio.findById(bancoId).orElseThrow();
+		int totalTransferencias = banco.getTotalTranserencias();
+		banco.setTotalTranserencias(++totalTransferencias);
+		bancoRepositorio.save(banco);
+
+	}
+
+}

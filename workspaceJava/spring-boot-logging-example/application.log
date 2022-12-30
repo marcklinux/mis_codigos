@@ -1,0 +1,85 @@
+2022-08-24 06:45:43,586 INFO  StartupInfoLogger:55 - [] Starting SpringBootLoggingExampleApplication using Java 17.0.1 on DESKTOP-NLP62P9 with PID 12868 (C:\Users\marck\OneDrive\Escritorio\workspaceJava\spring-boot-logging-example\target\classes started by marck in C:\Users\marck\OneDrive\Escritorio\workspaceJava\spring-boot-logging-example)
+2022-08-24 06:45:43,590 INFO  SpringApplication:634 - [] No active profile set, falling back to 1 default profile: "default"
+2022-08-24 06:45:44,517 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 7002 (http)
+2022-08-24 06:45:44,528 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2022-08-24 06:45:44,532 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-24 06:45:44,633 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2022-08-24 06:45:44,633 INFO  ServletWebServerApplicationContext:292 - [] Root WebApplicationContext: initialization completed in 982 ms
+2022-08-24 06:45:44,959 WARN  AbstractApplicationContext:591 - [] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 7002 is already in use
+2022-08-24 06:45:44,963 INFO  DirectJDKLog:173 - [] Stopping service [Tomcat]
+2022-08-24 06:45:44,975 INFO  ConditionEvaluationReportLoggingListener:136 - [] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-08-24 06:45:44,992 ERROR LoggingFailureAnalysisReporter:40 - [] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 7002 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 7002 or configure this application to listen on another port.
+
+2022-08-24 06:46:11.521  INFO 2264 --- [main] .e.s.SpringBootLoggingExampleApplication : Starting SpringBootLoggingExampleApplication using Java 17.0.1 on DESKTOP-NLP62P9 with PID 2264 (C:\Users\marck\OneDrive\Escritorio\workspaceJava\spring-boot-logging-example\target\classes started by marck in C:\Users\marck\OneDrive\Escritorio\workspaceJava\spring-boot-logging-example)
+2022-08-24 06:46:11.525  INFO 2264 --- [main] .e.s.SpringBootLoggingExampleApplication : No active profile set, falling back to 1 default profile: "default"
+2022-08-24 06:46:12.451  INFO 2264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7002 (http)
+2022-08-24 06:46:12.463  INFO 2264 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-24 06:46:12.463  INFO 2264 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-24 06:46:12.580  INFO 2264 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-24 06:46:12.590  INFO 2264 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1007 ms
+2022-08-24 06:46:13.002  WARN 2264 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 7002 is already in use
+2022-08-24 06:46:13.007  INFO 2264 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-08-24 06:46:13.024  INFO 2264 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-08-24 06:46:13.046 ERROR 2264 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 7002 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 7002 or configure this application to listen on another port.
+
+2022-08-24 06:46:45.402  INFO 4584 --- [main] .e.s.SpringBootLoggingExampleApplication : Starting SpringBootLoggingExampleApplication using Java 17.0.1 on DESKTOP-NLP62P9 with PID 4584 (C:\Users\marck\OneDrive\Escritorio\workspaceJava\spring-boot-logging-example\target\classes started by marck in C:\Users\marck\OneDrive\Escritorio\workspaceJava\spring-boot-logging-example)
+2022-08-24 06:46:45.405  INFO 4584 --- [main] .e.s.SpringBootLoggingExampleApplication : No active profile set, falling back to 1 default profile: "default"
+2022-08-24 06:46:46.352  INFO 4584 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7003 (http)
+2022-08-24 06:46:46.363  INFO 4584 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-24 06:46:46.363  INFO 4584 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-24 06:46:46.466  INFO 4584 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-24 06:46:46.466  INFO 4584 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 993 ms
+2022-08-24 06:46:46.868  INFO 4584 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7003 (http) with context path ''
+2022-08-24 06:46:46.880  INFO 4584 --- [main] .e.s.SpringBootLoggingExampleApplication : Started SpringBootLoggingExampleApplication in 1.914 seconds (JVM running for 2.873)
+2022-08-24 06:49:13.367  INFO 4584 --- [RMI TCP Connection(5)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-08-24 06:49:13.382  INFO 4584 --- [RMI TCP Connection(5)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-08-24 06:49:24,809 INFO  StartupInfoLogger:55 - [] Starting SpringBootLoggingExampleApplication using Java 17.0.1 on DESKTOP-NLP62P9 with PID 6504 (C:\Users\marck\OneDrive\Escritorio\workspaceJava\spring-boot-logging-example\target\classes started by marck in C:\Users\marck\OneDrive\Escritorio\workspaceJava\spring-boot-logging-example)
+2022-08-24 06:49:24,812 INFO  SpringApplication:634 - [] No active profile set, falling back to 1 default profile: "default"
+2022-08-24 06:49:25,725 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 7003 (http)
+2022-08-24 06:49:25,735 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2022-08-24 06:49:25,736 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-24 06:49:25,854 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2022-08-24 06:49:25,854 INFO  ServletWebServerApplicationContext:292 - [] Root WebApplicationContext: initialization completed in 979 ms
+2022-08-24 06:49:26,211 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 7003 (http) with context path ''
+2022-08-24 06:49:26,231 INFO  StartupInfoLogger:61 - [] Started SpringBootLoggingExampleApplication in 1.838 seconds (JVM running for 2.627)
+2022-08-24 06:51:38,560 INFO  SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159 - [] Application shutdown requested.
+2022-08-24 06:51:38,575 INFO  DirectJDKLog:173 - [] Stopping service [Tomcat]
+2022-08-24 06:52:13.012  INFO 8344 --- [main] .e.s.SpringBootLoggingExampleApplication : Starting SpringBootLoggingExampleApplication using Java 17.0.1 on DESKTOP-NLP62P9 with PID 8344 (C:\Users\marck\OneDrive\Escritorio\workspaceJava\spring-boot-logging-example\target\classes started by marck in C:\Users\marck\OneDrive\Escritorio\workspaceJava\spring-boot-logging-example)
+2022-08-24 06:52:13.014  INFO 8344 --- [main] .e.s.SpringBootLoggingExampleApplication : No active profile set, falling back to 1 default profile: "default"
+2022-08-24 06:52:13.950  INFO 8344 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7003 (http)
+2022-08-24 06:52:13.961  INFO 8344 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-24 06:52:13.962  INFO 8344 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-24 06:52:14.095  INFO 8344 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-24 06:52:14.095  INFO 8344 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1011 ms
+2022-08-24 06:52:14.502  INFO 8344 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7003 (http) with context path ''
+2022-08-24 06:52:14.522  INFO 8344 --- [main] .e.s.SpringBootLoggingExampleApplication : Started SpringBootLoggingExampleApplication in 1.956 seconds (JVM running for 2.76)
+2022-08-24 06:52:57.166  INFO 8344 --- [RMI TCP Connection(4)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-08-24 06:52:57.180  INFO 8344 --- [RMI TCP Connection(4)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]

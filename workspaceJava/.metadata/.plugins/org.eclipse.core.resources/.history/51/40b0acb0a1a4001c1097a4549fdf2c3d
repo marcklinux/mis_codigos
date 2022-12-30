@@ -1,0 +1,5 @@
+package com.pais.dao;
+
+public interface PaisDAO {
+
+}

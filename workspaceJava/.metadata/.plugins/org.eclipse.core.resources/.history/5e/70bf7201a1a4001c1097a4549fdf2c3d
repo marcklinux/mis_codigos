@@ -1,0 +1,30 @@
+package com.pais.dominio;
+
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name="ESTADO")
+public class Estado {
+	
+	@Id
+	int id;
+	String nombre;
+	String region;
+	int habitantes;
+	String capital;
+	
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name="ID_PAIS")
+	Pais pais;
+
+}

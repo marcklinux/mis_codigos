@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS cliente;
+
+create table cliente (
+id int auto_increment,
+nombre varchar(250),
+apellido varchar(250),
+direccion varchar(100),
+dni integer,
+fecha date
+);

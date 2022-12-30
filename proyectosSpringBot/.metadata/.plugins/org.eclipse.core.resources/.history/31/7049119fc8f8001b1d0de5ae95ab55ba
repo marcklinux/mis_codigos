@@ -1,0 +1,18 @@
+package com.mx.CrudRest.dto;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="cliente")
+public class Cliente {
+
+	private Long id;
+	private String name;
+	private String apellido;
+	private String direccion;
+	private int dni;
+	private Date fecha;
+}

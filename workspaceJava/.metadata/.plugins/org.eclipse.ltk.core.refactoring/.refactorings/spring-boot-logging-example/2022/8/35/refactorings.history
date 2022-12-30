@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.example.springbootloggingexample.controller.MessageControlller.java&apos; to &apos;MessageController.java&apos;&#x0D;&#x0A;- Original project: &apos;spring-boot-logging-example&apos;&#x0D;&#x0A;- Original element: &apos;com.example.springbootloggingexample.controller.MessageControlller.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.example.springbootloggingexample.controller.MessageController.java&apos;" description="Rename compilation unit &apos;MessageControlller.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.springbootloggingexample.controller{MessageControlller.java" name="MessageController.java" references="false" stamp="1661340117884" version="1.0"/>
+</session>

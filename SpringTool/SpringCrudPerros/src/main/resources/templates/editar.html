@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Agregar</title>
+</head>
+<body>
+
+<h1>agregar perro</h1>
+<a th:href="@{/}">Regresar</a>
+<br/>
+<form th:action = "@{/update}" method="POST" th:object= "${perro}">
+<label for = "id"> Id: </label>
+<input type="text" name = "id" th:field="*{id}"/>
+<br/>
+<label for = "nombre"> nombre: </label>
+<input type="text" name = "nombre" th:field="*{nombre}"/>
+<br/>
+<label for = "raza"> Raza: </label>
+<input type="text" name = "raza" th:field="*{raza}"/>
+<br/>
+<label for = "edad"> Edad: </label>
+<input type="text" name = "edad" th:field="*{edad}"/>
+<br/>
+<label for = "descripcion"> Decripcion: </label>
+<input type="text" name = "descripcion" th:field="*{descripcion}"/>
+<br/>
+<input type="submit" name="editar" value="editar"/>
+</form>
+
+</body>
+</html>

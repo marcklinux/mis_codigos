@@ -1,0 +1,36 @@
+package com.pais.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.pais.dominio.Estado;
+import com.pais.servicio.EstadoServ;
+
+import lombok.var;
+
+
+
+@Controller
+@RequestMapping("estadoControl")
+public class EstadoControl {
+	
+	@Autowired
+	 private EstadoServ estadoServ;
+	
+	@GetMapping("/")
+	public String inicio (Model model) {
+		var lista = estadoServ.listar();
+		model.addAttribute("lista", lista);
+		return "estado";
+		
+	}
+	
+	@GetMapping("alta")
+	public String alta(Estado estado) {
+		return "agregarEstado";
+	}
+
+}

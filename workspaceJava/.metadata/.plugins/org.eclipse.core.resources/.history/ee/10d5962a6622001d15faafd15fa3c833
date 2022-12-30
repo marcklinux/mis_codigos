@@ -1,0 +1,13 @@
+package com.pruebas.banco.repositorios;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.pruebas.banco.entidades.Cuenta;
+
+public interface CuentaRepositorio extends JpaRepository<Cuenta,Long> {
+	
+	public Optional<Cuenta> findByPersona();
+
+}
