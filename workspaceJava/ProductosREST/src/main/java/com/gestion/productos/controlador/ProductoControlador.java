@@ -29,7 +29,7 @@ public class ProductoControlador {
 		return servicio.listarProductos();
 	}
 	
-	@GetMapping("/getType")
+	@GetMapping(value ="/getType",params="filtro")
 	public List<Producto> listarProductosPorNombre(@RequestParam String filtro){
 		return servicio.obtenerProductoPorNombre(filtro);
 	}
